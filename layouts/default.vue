@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useFetchSpotify } from "~/composables/useFetchSpotify";
+import { getFlagIcon } from "../utils/getFlagIcon";
 import { MeReturn } from "../types";
 const route = useRoute();
 const router = useRouter();
@@ -101,29 +102,51 @@ useHead({
           </div>
         </nav>
       </header>
-      <div class="container mx-auto p-4">
-        <div class="py-16">
-          <h1 class="text-3xl text-center font-bold">Spotify Profile</h1>
-
-          <!-- Logged in -->
-          <div class="w-full flex flex-col items-center mt-12" v-if="meData">
+      <div
+        class="container mx-auto p-4 bg-white bg-opacity-70 backdrop-filter border border-white border-t-0"
+      >
+        <div>
+          <div class="w-full flex items-end gap-6" v-if="meData">
             <img
               :src="meData.images[1].url"
               :alt="meData.display_name"
-              class="rounded-full object-cover w-[120px] h-[120px] mb-8"
+              class="rounded-full object-cover w-[160px] h-[160px]"
             />
-            <p class="rounded-full font-bold">
-              {{ meData.display_name }}
-            </p>
-            <p class="rounded-full font-bold">
-              {{ meData.email }}
-            </p>
-            <p class="rounded-full font-bold">
-              {{ meData.product }}
-            </p>
-            <p class="rounded-full font-bold">
-              {{ meData.external_urls.spotify }}
-            </p>
+            <div class="w-full">
+              <p class="font-bold capitalize text-4xl">
+                {{ meData.display_name }}
+              </p>
+              <p class="text-xl">
+                {{ meData.email }}
+              </p>
+              <div class="flex mt-2 items-center gap-3">
+                <img
+                  :src="getFlagIcon(meData.country)"
+                  :alt="meData.country"
+                  class="object-cover w-[16px] h-[12px] rounded-sm shadow-sm"
+                />
+
+                <div
+                  class="rounded-full border border-yellow px-2 bg-yellow bg-opacity-20 text-yellow text-sm capitalize"
+                  v-if="meData.product === 'premium'"
+                >
+                  <p>🌟 Premium User</p>
+                </div>
+                <p class="text-sm capitalize">
+                  🙆‍♂️ {{ meData.followers.total }} Followers
+                </p>
+                <a
+                  :href="meData.external_urls.spotify"
+                  class="text-sm capitalize underline group"
+                >
+                  Visit profile
+                  <Icon
+                    name="iconoir:arrow-tr"
+                    class="relative group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"
+                  />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         <slot />
