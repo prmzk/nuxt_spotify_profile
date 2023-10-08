@@ -65,13 +65,19 @@ function onClickLogOut() {
 <template>
   <section>
     <div>
-      <header class="shadow-md bg-black">
+      <header class="shadow-md bg-blacker">
         <nav class="container mx-auto p-4 flex justify-between">
-          <NuxtLink
-            to="/"
-            class="text-yellow font-bold font-space tracking-tight text-3xl"
-            >MyTastify.</NuxtLink
-          >
+          <div class="flex gap-4">
+            <div class="h-[36px]">
+              <img src="/logo.webp" alt="my-tastify" class="h-full" />
+            </div>
+            <NuxtLink
+              to="/"
+              class="text-yellow font-bold font-space tracking-tight text-3xl"
+              >MyTastify.</NuxtLink
+            >
+          </div>
+
           <!-- Logged out -->
           <div v-if="!spotifyAuthToken">
             <button class="btn text-sm" @click="onClickLogIn">
