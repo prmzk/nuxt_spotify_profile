@@ -11,10 +11,8 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      Asap: {
-        wght: [300, 400, 500],
-      },
-      "Maven Pro": [500, 700],
+      "Space Mono": [500, 700],
+      "Maven Pro": [400, 500, 600, 700],
     },
   },
   runtimeConfig: {
