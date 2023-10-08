@@ -8,7 +8,7 @@
 
 body {
   min-height: 100dvh;
-  background-color: #e8eddf;
+  background: linear-gradient(129deg, rgba(207, 219, 213, 1) 4%, #f5cb5c 100%);
 }
 
 * {

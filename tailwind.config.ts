@@ -16,6 +16,14 @@ module.exports = {
       black: "#333533",
       blacker: "#242423",
     },
+    container: {
+      screens: {
+        DEFAULT: "768px",
+        lg: "768px",
+        xl: "768px",
+        "2xl": "768px",
+      },
+    },
     extend: {
       fontFamily: {
         space: ['"Space Mono"', ...defaultTheme.fontFamily.sans],
