@@ -2,6 +2,10 @@
   font-family: "Maven Pro", "Arial Narrow", Arial, sans-serif;
 }
 
+.btn {
+  @apply bg-yellow px-4 h-full py-1 rounded-full font-bold opacity-100 hover:bg-opacity-90 transition-all;
+}
+
 body {
   min-height: 100dvh;
   background-color: #e8eddf;
