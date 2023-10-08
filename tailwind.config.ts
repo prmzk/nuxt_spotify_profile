@@ -9,9 +9,16 @@ module.exports = {
     "./app.vue",
   ],
   theme: {
+    colors: {
+      gray: "#cfdbd5",
+      white: "#e8eddf",
+      yellow: "#f5cb5c",
+      black: "#333533",
+      blacker: "#242423",
+    },
     extend: {
       fontFamily: {
-        asap: ['"Asap"', ...defaultTheme.fontFamily.sans],
+        space: ['"Space Mono"', ...defaultTheme.fontFamily.sans],
       },
     },
   },
