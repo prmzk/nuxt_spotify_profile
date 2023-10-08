@@ -65,7 +65,7 @@ function onClickLogOut() {
 <template>
   <section class="container mx-auto">
     <div class="py-16">
-      <h1 class="text-3xl text-center font-bold">Spotify Profile</h1>
+      <h1 class="text-3xl text-center font-bold font-asap">Spotify Profile</h1>
 
       <!-- Logged out -->
       <div class="w-full flex justify-center mt-12" v-if="!spotifyAuthToken">
@@ -100,7 +100,7 @@ function onClickLogOut() {
 
       <div class="w-full flex justify-center mt-12" v-if="spotifyAuthToken">
         <button
-          class="bg-blue-300 px-8 py-4 rounded-full font-bold"
+          class="bg-blue-300 px-8 py-4 rounded-full font-bold font-asap"
           @click="onClickLogOut"
         >
           LOG OUT
