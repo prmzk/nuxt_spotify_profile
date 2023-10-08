@@ -60,6 +60,16 @@ function onClickLogOut() {
   spotifyRefreshToken.value = null;
   meData.value = undefined;
 }
+
+useHead({
+  title: "MyTastify - Seek your taste!",
+  meta: [
+    {
+      name: "description",
+      content: "Seek your music taste based on your spotify profile!",
+    },
+  ],
+});
 </script>
 
 <template>
