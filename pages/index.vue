@@ -9,8 +9,10 @@ const spotifyAuthState = useCookie("spotify_auth_state");
 
 // Get profile data
 const meData = ref<MeReturn | null>();
-const { data } = await useFetchSpotify<MeReturn>("/me");
-meData.value = data?.value;
+if (spotifyAuthToken.value) {
+  const { data } = await useFetchSpotify<MeReturn>("/me");
+  meData.value = data?.value;
+}
 
 // Logged out state
 // Log in btn
