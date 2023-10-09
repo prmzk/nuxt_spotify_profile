@@ -28,6 +28,12 @@ module.exports = {
       fontFamily: {
         space: ['"Space Mono"', ...defaultTheme.fontFamily.sans],
       },
+      height: {
+        screen: ["100vh /* fallback for Opera, IE and etc. */", "100dvh"],
+      },
+      minHeight: {
+        screen: ["100vh /* fallback for Opera, IE and etc. */", "100dvh"],
+      },
     },
   },
   plugins: [],
