@@ -34,7 +34,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 p,
 ul {
   margin-bottom: 8px;
