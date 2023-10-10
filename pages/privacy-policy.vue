@@ -19,15 +19,12 @@
     </ul>
     <p class="text-white text-md">
       None of your data that you shared is stored or collected anywhere on the
-      server, and not shared with any thirt party app/APIs. All data and
+      server, and not shared with any third party app/APIs. All data and
       information is used solely to be displayed on this app.
     </p>
     <p class="text-white text-md">
-      Although you can rest assured that your data is not being stored or used
-      maliciously, if you would like to revoke Receiptify's permissions, you can
-      visit your apps page and click "REMOVE ACCESS" on Receiptify. Here is a
-      more detailed guide for doing so. But even with the statement above, if
-      you want to revoke this app's permission, you can manage it on
+      But even with the statement above, if you want to revoke this app's
+      permission, you can manage it on
       <a href="https://www.spotify.com/us/account/apps/">your spotify account</a
       >. Detailed guide on how to do it
       <a href="https://support.spotify.com/us/article/spotify-on-other-apps/"
