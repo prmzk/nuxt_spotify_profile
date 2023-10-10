@@ -8,7 +8,8 @@ export default defineEventHandler(() => {
   const redirect_uri = config.spotifyRedirectUri;
   const CLIENT_ID = config.spotifyClientId;
   const state = generateRandomString(16);
-  const scope = "user-read-private user-read-email";
+  const scope =
+    "user-read-private user-read-email user-top-read user-read-recently-played user-read-playback-state user-library-read";
 
   const navigate_to =
     url +
