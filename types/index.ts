@@ -99,23 +99,11 @@ export type SpotifyAlbum = {
   };
   href: string;
   id: string;
-  images: [
-    {
-      height: number;
-      url: string;
-      width: number;
-    },
-    {
-      height: number;
-      url: string;
-      width: number;
-    },
-    {
-      height: number;
-      url: string;
-      width: number;
-    }
-  ];
+  images: {
+    height: number;
+    url: string;
+    width: number;
+  }[];
   name: string;
   release_date: string;
   release_date_precision: string;
@@ -145,13 +133,11 @@ export type PlayerInfo = {
 export type SpotifyPlaylist = {
   href: string;
   id: string;
-  images: [
-    {
-      url: string;
-      height: number;
-      width: number;
-    }
-  ];
+  images: {
+    height: number;
+    url: string;
+    width: number;
+  }[];
   name: string;
   owner: {
     external_urls: {
@@ -206,10 +192,39 @@ export type SpotifySavedTracks = {
         popularity: number;
         preview_url: string;
         track_number: number;
-        type: "track";
+        type: string;
         uri: string;
         is_local: false;
       };
     }
   ];
+};
+
+export type SpotifyPodcastEpisode = {
+  added_at: string;
+  show: {
+    available_markets: string[];
+    copyrights: string[];
+    description: string;
+    explicit: false;
+    external_urls: {
+      spotify: string;
+    };
+    href: string;
+    html_description: string;
+    id: string;
+    images: {
+      height: number;
+      url: string;
+      width: number;
+    }[];
+    is_externally_hosted: boolean;
+    languages: string[];
+    media_type: string;
+    name: string;
+    publisher: string;
+    total_episodes: number;
+    type: string;
+    uri: string;
+  };
 };
